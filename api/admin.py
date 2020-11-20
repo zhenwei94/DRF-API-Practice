@@ -8,3 +8,5 @@ admin.site.register(Booknumber)
 admin.site.register(Character)
 admin.site.register(Rating)
 admin.site.register(Person)
+
+
