@@ -14,4 +14,6 @@ COPY . /app
 
 EXPOSE 8000
 
-CMD python manage.py runserver
+#CMD python manage.py runserver
+
+ENTRYPOINT ["python", "manage.py", "runserver", "8000"]
