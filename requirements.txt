@@ -5,4 +5,5 @@ pytz==2020.1
 sqlparse==0.4.1
 django-cors-headers
 Pillow
-gunicorn
+gunicorn==19.7.1
+whitenoise==3.3.1

@@ -26,7 +26,9 @@ SECRET_KEY = ')%x%f9#$(ct75y3a$)qs&^$)l%z@@+v(+lx9l179w=5etj$(ig'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS=[
+os.environ.get('OPENSHIFT_DNS', '*')
+]
 
 
 # Application definition

@@ -12,8 +12,11 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-EXPOSE 8000
-
 #CMD python manage.py runserver
 
-ENTRYPOINT ["python", "manage.py", "runserver", "8000"]
+RUN ./manage.py collectstatic --no-input
+
+CMD gunicorn openshift_django.wsgi -b 0.0.0.0:3013
+
+EXPOSE 3013
+
