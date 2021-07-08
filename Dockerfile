@@ -14,7 +14,6 @@ COPY . /app
 
 #CMD python manage.py runserver
 
-RUN ./manage.py collectstatic --no-input
 
 CMD gunicorn openshift_django.wsgi -b 0.0.0.0:3013
 
