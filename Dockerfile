@@ -15,7 +15,7 @@ COPY . /app
 #CMD python manage.py runserver
 
 
-CMD gunicorn openshift_django.wsgi -b 0.0.0.0:3013
+CMD gunicorn practice.wsgi -b 0.0.0.0:3013
 
 EXPOSE 3013
 
