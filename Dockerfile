@@ -12,10 +12,10 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-CMD python manage.py runserver 3013
+#CMD python manage.py runserver 3013
 
 
-#CMD gunicorn practice.wsgi -b 0.0.0.0:3013
+CMD gunicorn practice.wsgi -b 0.0.0.0:3013
 
 EXPOSE 3013
 
