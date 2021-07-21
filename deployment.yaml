@@ -3,19 +3,18 @@ kind: Deployment
 metadata:
   name: api-app
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: api-app
-      replicas: 1
+  replicas: 1
   template:
     metadata:
       labels:
         app: api-app
     spec:
       containers:
-        - image: zhenweiwong/drf-api-practice:latest
-          name: api-app
+        - name: api-app
+          image: zhenweiwong/drf-api-practice:latest
           ports:
             - containerPort: 3013
           command:
