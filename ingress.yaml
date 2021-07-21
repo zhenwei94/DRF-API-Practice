@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: api-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
+spec:
+  tls:
+  - hosts:
+    - your_domain.com
+  rules:
+  - host: your_domain.com
+    http:
+      paths:
+      - backend:
+          serviceName: deployment-svc
+          servicePort: 3013
