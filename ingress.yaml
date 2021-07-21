@@ -2,17 +2,11 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: api-ingress
-  annotations:
-    kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/cluster-issuer: "letsencrypt-staging"
 spec:
-  tls:
-  - hosts:
-    - yourdomain.com
   rules:
-  - host: yourdomain.com
+  - host: apiapp.kube.com
     http:
       paths:
       - backend:
-          serviceName: deployment-svc
+          serviceName: api-app-service
           servicePort: 3013
