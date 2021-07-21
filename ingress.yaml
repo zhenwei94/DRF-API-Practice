@@ -8,9 +8,9 @@ metadata:
 spec:
   tls:
   - hosts:
-    - your_domain.com
+    - yourdomain.com
   rules:
-  - host: your_domain.com
+  - host: yourdomain.com
     http:
       paths:
       - backend:
